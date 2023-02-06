@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {position: relative;}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -18,12 +18,14 @@
 
 .Nav {
   background-color: rgb(8, 8, 8);
-  width: 98.9vw;
+  width:100vw;
   height: 60px;
   display: flex;
   align-items: center;
   padding: 40px;
+  
   /* position: sticky; */
+  /* border: 2px solid red; */
   z-index: 99999999999999999;
   top: 0;
   margin-bottom: 30px;
@@ -51,32 +53,41 @@
 
 .Navbar {
   display: flex;
-  width: 90vw;
-  gap: 50px;
+  width: 20vw;
+  /* gap: 50px; */
   align-items: center;
   margin: 0 auto;
+  
 }
 
 .Navbar img {
   width: 200px;
+  
 }
 
-.Nav-items {
-  display: flex;
 
-  justify-content: space-evenly;
-  width: 35vw;
-}
 
-.Nav-items a {
-  text-decoration: none;
+.Nav-items ul li{
+  list-style-type: none;
   color: white;
 }
 
-.Nav-items a:hover {
+.link:hover {
   text-decoration: underline red;
 }
-
+.link{
+  text-decoration: none;
+  color: white;
+}
+.nav-li{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  /* border: 1px solid; */
+  width: 60vw;
+  
+}
 .Movies-liste {
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +95,8 @@
   justify-items: center;
   row-gap: 30px;
   justify-content: space-evenly;
- margin-top: 3cm;
+  margin: 3cm 0;
+
 
 
 }
@@ -112,8 +124,8 @@
   top: 0;
   left: 0;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.615);
-  z-index: 99999999999999;
+  
+  
 
 }
 
@@ -173,18 +185,25 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  margin: 0 auto;
+ margin-left: 3cm;
 
+  
+}
+.img-404{
+ width: 600px; 
 }
 .footer{
   background-color: rgb(8, 8, 8);
-  width: 98.9vw;
+  width: 100vw;
   height: 60px;
   margin-top: 10px;
   border-top: 2px solid;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: static;
-  bottom: 0;
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+ 
 }

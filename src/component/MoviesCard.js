@@ -1,22 +1,23 @@
 import React from 'react'
 import useState from 'react-hook-use-state'
-import Detailes from './Detailes'
+import Detailes from './Viewes/Detailes'
 import ReactStars from 'react-stars'
+import { Link } from 'react-router-dom'
 
 
 
 const MoviesCard = ({ films }) => {
   
-  const [Show, setShow] = useState(false)
+  
  
   return (
   
       
-        <div  onClick={()=>{setShow(true)}} className="Movies-Container">
+        <div  className="Movies-Container">
 
-          <img src={films.posterurl} />
+          <Link style={{textDecoration:'none', color:'white' , textAlign:'center'}} to={`/films`}   state={films} >  <img src={films.posterurl} />
 
-          <h3>{films.name}</h3>
+          <h3 >{films.name}</h3>
 
           <ReactStars className='ReactStars'
           value={films.rating}
@@ -24,10 +25,10 @@ const MoviesCard = ({ films }) => {
           size={24}
           color2={'#ffd700'} />
       
-          
+          </Link>
           
   
-             {Show ? <Detailes movie={films} filmshow={setShow}/> : null} 
+              
             
             
         </div>

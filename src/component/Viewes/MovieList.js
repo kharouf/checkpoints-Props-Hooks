@@ -1,6 +1,6 @@
 import React from 'react'
-import MoviesCard from './MoviesCard'
-import movies from './Data'
+import MoviesCard from '../MoviesCard'
+import movies from '../Data'
 
 
 const MovieList = ({Text}) => {

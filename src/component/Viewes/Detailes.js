@@ -1,14 +1,17 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 import ReactStars from 'react-stars'
 
 
-const Detailes = ({ movie, filmshow }) => {
+const Detailes = () => {
+  const location = useLocation()
+  const movie=location.state
 
   return (
   
 < div className='croix'>
-       <div onMouseEnter={() => filmshow(false)} className="x">X</div>
+       
        
       <div className="Detailes-Container position ">
        
